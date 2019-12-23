@@ -1,0 +1,19 @@
+<!--pages/home/list/cz/index.wxml-->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text>精选文章列表
+    </view>
+  </view>
+  <view class='cu-list menu-avatar'>
+    <view class='cu-item' wx:for="{{list}}" wx:key bindtap='bindViewArticle' data-targetUrl="{{item.targetUrl}}">
+      <view class="cu-avatar radius lg" style="background-image:url({{item.image}});"></view>
+        <view class='content'>
+          <view class=''>
+            <view class='text-cut'>{{item.articleTitle}}</view>
+          </view>
+          <view class="text-gray text-sm flex">
+               <text class="text-cut">{{item.gzhName}}</text>
+          </view>
+        </view>
+    </view>
+  </view>

@@ -1,0 +1,37 @@
+<!--pages/home/index.wxml-->
+<scroll-view scroll-y="true" class="page">
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text>阅读向导
+    </view>
+  </view>
+  <view class="cu-list grid col-3">
+    <view class="cu-item" wx:for="{{iconList}}" wx:key bindtap='bindViewTap'>
+      <view class="cuIcon-{{item.icon}} text-{{item.color}}">
+        <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
+        </view>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <!--精选文章-->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text>精选文章
+    </view>
+  </view>
+  <view class='cu-list menu-avatar menu'>
+    <view class='cu-item' wx:for="{{articlelist}}" wx:key bindtap='bindViewArticle' data-targetUrl="{{item.targetUrl}}">
+      <view class="cu-avatar radius lg" style="background-image:url({{item.image}});"></view>
+        <view class='content'>
+          <view class=''>
+            <view class='text-cut'>{{item.articleTitle}}</view>
+          </view>
+          <view class="text-gray text-sm flex">
+               <text class="text-cut">{{item.gzhName}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</scroll-view>

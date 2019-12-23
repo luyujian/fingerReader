@@ -1,0 +1,3 @@
+<!--pages/home/view/index.wxml-->
+
+<web-view src="{{source}}"></web-view>

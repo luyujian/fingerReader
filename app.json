@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/home/view/index",
+    "pages/home/list/cz/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "指尖十分钟阅读",
+    "navigationBarTextStyle":"black"
+  }
+}
